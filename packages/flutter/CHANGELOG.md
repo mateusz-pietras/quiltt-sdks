@@ -1,5 +1,20 @@
 # Changelog
 
+## 6.0.0
+
+### Minor Changes
+
+- Add Flutter Web platform support via `dart:js_interop` / Wasm-compatible JS interop.
+  The Quiltt JS SDK is loaded lazily from CDN on first use; a pre-loaded SDK
+  (script added to `index.html`) is detected automatically and dynamic injection
+  is skipped.
+
+### Breaking Changes
+
+- The previously public `connectorId`, `connectionId`, and `controller` fields on
+  `QuilttConnector` have been removed. These were internal implementation details;
+  use the public callback API instead.
+
 ## 5.2.5
 
 ### Patch Changes
